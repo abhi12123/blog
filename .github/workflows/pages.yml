@@ -36,3 +36,17 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+...
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    env:
+      NEXT_PUBLIC_BASE_PATH: /abhi12123
+
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+...
