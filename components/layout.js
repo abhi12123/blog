@@ -33,11 +33,12 @@ export default function Layout({ children, home }) {
       </nav>
       <main>{children}</main>
       {!home && (
-        <div>
+        <footer>
+          <hr />
           <Link href="/">
             <a>← Back to home</a>
           </Link>
-        </div>
+        </footer>
       )}
     </div>
   );
