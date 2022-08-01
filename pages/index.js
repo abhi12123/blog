@@ -53,8 +53,8 @@ export default function Home({ allPostsData }) {
       <section>
         <ul>
           {allPostsData?.map(({ id, date, title }) => (
-            <li key={id.toLowerCase()}>
-              <Link href={`/posts/${id.toLowerCase()}`}>
+            <li key={id}>
+              <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
