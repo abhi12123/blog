@@ -44,9 +44,9 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <h1>Abhinav's Blog</h1>
+        <h1>{`Abhinav's Blog`}</h1>
         <h2>
-          Welcome to my Blog ! I'll be mostly talking about web development.
+          {`Welcome to my Blog ! I'll be mostly talking about web development.`}
         </h2>
         <hr />
       </section>
