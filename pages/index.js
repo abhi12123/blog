@@ -44,15 +44,17 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <p>Blog Created using Next.js !</p>
-        <p>Will be mostly talking about web development.</p>
+        <h1>Abhinav's Blog</h1>
+        <h2>
+          Welcome to my Blog ! I'll be mostly talking about web development.
+        </h2>
         <hr />
       </section>
       <section>
         <ul>
           {allPostsData?.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
+            <li key={id.toLowerCase()}>
+              <Link href={`/posts/${id.toLowerCase()}`}>
                 <a>{title}</a>
               </Link>
               <br />

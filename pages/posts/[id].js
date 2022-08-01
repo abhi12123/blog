@@ -37,7 +37,7 @@ export default function Post({ postData }) {
         />
         <meta
           property="og:url"
-          content={`https://www.abhinavvp.com/posts/${postData.id}`}
+          content={`https://www.abhinavvp.com/posts/${postData.id.toLowerCase()}`}
         />
         <meta property="og:site_name" content={postData.title} />
         <meta name="twitter:title" content={postData.title} />
@@ -59,7 +59,7 @@ export default function Post({ postData }) {
       </article>
       <nav className="nav-items">
         {postData.prevPost && (
-          <Link href={`/posts/${postData.prevPost.id}`}>
+          <Link href={`/posts/${postData.prevPost.id.toLowerCase()}`}>
             <a>
               <div className="nav-item prev-post">
                 <small>⬅️ Previous Post</small>
@@ -69,7 +69,7 @@ export default function Post({ postData }) {
           </Link>
         )}
         {postData.nextPost && (
-          <Link href={`/posts/${postData.nextPost.id}`}>
+          <Link href={`/posts/${postData.nextPost.id.toLowerCase()}`}>
             <a>
               <div className="nav-item next-post">
                 <small>Next Post ➡️</small>
