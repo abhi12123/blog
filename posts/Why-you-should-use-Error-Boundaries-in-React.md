@@ -1,6 +1,7 @@
 ---
 title: "Why You Should Use Error Boundaries in React"
 date: "2022-02-12"
+description: "React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app. "
 ---
 
 React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app.  
@@ -45,7 +46,7 @@ export default function DisplayName({ name }) {
 
 The browser will display something like this.
 
-![code sample](https://miro.medium.com/max/723/1*iaKiQ9i-jsEewCeHqHMs8g.png)
+![output without error](https://miro.medium.com/max/723/1*iaKiQ9i-jsEewCeHqHMs8g.png)
 
 If there were any errors while rendering any one of the components the entire application would be crashed and an empty page would be displayed on the production build. It would be hard to find and debug the error as well. For example, the following code will crash the application since the prop `name` is not being passed down to one of the components.
 
@@ -131,7 +132,7 @@ export default App;
 
 The browser will display output as
 
-![code sample](https://miro.medium.com/max/754/1*XYsZV_AY7cXrE3eYJaH7tQ.png)
+![output with error handled](https://miro.medium.com/max/754/1*XYsZV_AY7cXrE3eYJaH7tQ.png)
 
 Instead of crashing the whole application.
 

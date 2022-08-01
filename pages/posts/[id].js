@@ -25,7 +25,29 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.title} | Abhinav VP | Web development</title>
+        <meta name="description" content={postData.description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:description" content={postData.description} />
+        <meta
+          property="og:image"
+          content="https://about.abhinavvp.com/images/profile-pic.jpg"
+        />
+        <meta
+          property="og:url"
+          content={`https://www.abhinavvp.com/posts/${postData.id}`}
+        />
+        <meta property="og:site_name" content={postData.title} />
+        <meta name="twitter:title" content={postData.title} />
+        <meta name="twitter:description" content={postData.description} />
+        <meta
+          name="twitter:image"
+          content="https://about.abhinavvp.com/images/profile-pic.jpg"
+        />
+        <meta name="twitter:site" content="@abhi_vp_" />
+        <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
       <article>
         <h1>{postData.title}</h1>
@@ -35,6 +57,28 @@ export default function Post({ postData }) {
         <hr />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <nav className="nav-items">
+        {postData.prevPost && (
+          <Link href={`/posts/${postData.prevPost.id}`}>
+            <a>
+              <div className="nav-item prev-post">
+                <small>⬅️ Previous Post</small>
+                <p>{postData.prevPost.title}</p>
+              </div>
+            </a>
+          </Link>
+        )}
+        {postData.nextPost && (
+          <Link href={`/posts/${postData.nextPost.id}`}>
+            <a>
+              <div className="nav-item next-post">
+                <small>Next Post ➡️</small>
+                <p>{postData.nextPost.title}</p>
+              </div>
+            </a>
+          </Link>
+        )}
+      </nav>
     </Layout>
   );
 }

@@ -1,6 +1,7 @@
 ---
 title: "Another 4 JavaScript Tips for Shorter Code"
 date: "2021-11-28"
+description: "4 more javascript tricks. This is continuation to my older acrticle on javascript"
 ---
 
 This is a continuation to my earlier article : [4 JavaScript tips for shorter code](https://abhinavvp.com/posts/4-javascript-tips-for-shorter-code/)

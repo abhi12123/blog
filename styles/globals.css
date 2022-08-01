@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
 }
 
-nav{
+.navbar{
   padding:0 10%;
   display: flex;
   justify-content: space-between;
@@ -18,15 +18,13 @@ nav{
   background-color:black;
 }
 
-nav a {
-  text-decoration: none;
+.navbar a {
   color: white;
 }
-
-section{
-  padding:0 10%;
+a{
+  text-decoration: none;
+  color: inherit;
 }
-
 section ul {
   list-style-type:none;
 }
@@ -35,7 +33,7 @@ section ul li{
   padding-bottom: 20px;
 }
 
-article{
+article, nav, section{
   padding:0 10%;
 }
 
@@ -46,4 +44,37 @@ h1{
 
 footer{
   padding:20px 10%;
+  text-align: center;
+}
+
+img, pre{
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.nav-items{
+  display: flex;
+  justify-content: space-between;
+  gap:20px;
+}
+
+.nav-item{
+  border: 1px solid #b0b0b08c;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.nav-item:hover{
+  box-shadow: #b0b0b08c 1px 3px 9px 0px;
+}
+
+.next-post{
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .nav-items {
+    flex-direction: column;
+  }
 }

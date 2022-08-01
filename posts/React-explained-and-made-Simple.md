@@ -1,9 +1,12 @@
 ---
 title: "React Explained and Made Simple"
 date: "2021-11-21"
+description: "As per the landing page of React , it is a JavaScript library to build user interfaces. Its not a framework, but a library.
+Angular, Vue, Next.js, Gatsby, Redwood.js etc are examples for frameworks. A framework includes resources that a large-scale application might need : creating forms, running automated tests, making network requests etc.
+Whereas React itself does not include many of these functionalities. Core react is used only to build User Interfaces. In order to build complete React applications, you will need to choose the required packages and tools on your own. For example, for forms and validation React Hook Form or Formik can be used and for testing React Testing Library or Jest can be used."
 ---
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1635659888350/RiQ52UEMy.png)
+![React landing page image](https://cdn.hashnode.com/res/hashnode/image/upload/v1635659888350/RiQ52UEMy.png)
 
 # Is React a Framework ?
 
@@ -17,7 +20,7 @@ Whereas React itself does not include many of these functionalities. Core react 
 
 In React, a web page can be divided to encapsulated blocks of code called components. These components can be composed to create complex UIs. Component logic is written in JavaScript instead of templates in React. Required data can be passed to the web app via these components easily, which renders accordingly on change.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1635659993376/DjJ1PAZvy.png)
+![how components looks like](https://cdn.hashnode.com/res/hashnode/image/upload/v1635659993376/DjJ1PAZvy.png)
 
 ## Declarative
 

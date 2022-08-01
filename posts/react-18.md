@@ -1,6 +1,7 @@
 ---
 title: "Behold, React 18 !"
 date: "2022-04-09"
+description: "A new version of React was released on the 29th of March this year. The latest version, React 18, includes some out-of-the-box improvements, including concurrent rending, new APIs, and much more. In this article, we shall go through some of the new features that have been introduced in React v18."
 ---
 
 A new version of React was released on the 29th of March this year. The latest version, React 18, includes some out-of-the-box improvements, including concurrent rending, new APIs, and much more. In this article, we shall go through some of the new features that have been introduced in React v18.
