@@ -51,9 +51,9 @@ export default function Home({ allTopics = [] }) {
       </section>
       <section>
         <ul>
-          {allTopics.map((topic) => {
+          {allTopics.map((topic, index) => {
             return (
-              <li>
+              <li key={index}>
                 <Link href={`/topics/${topic.slug}`}>
                   <a>
                     {topic.name}({topic.postsCount})

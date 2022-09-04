@@ -59,9 +59,9 @@ export default function Post({ postData }) {
           <li>{postData.time} minutes 🕒</li>
           <li>
             {postData.topics
-              .map((topic) => {
+              .map((topic, index) => {
                 return (
-                  <Link href={`/topics/${generateSlug(topic)}`}>
+                  <Link key={index} href={`/topics/${generateSlug(topic)}`}>
                     <a>{`#${generateSlug(topic)}`}</a>
                   </Link>
                 );
