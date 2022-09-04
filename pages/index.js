@@ -48,6 +48,11 @@ export default function Home({ allPostsData }) {
         <h2>
           {`Welcome to my Blog ! I'll be mostly talking about web development.`}
         </h2>
+        <h3>
+          <Link href="/topics">
+            <a>👉 Read from Topics 📚</a>
+          </Link>
+        </h3>
         <hr />
       </section>
       <section>

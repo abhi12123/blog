@@ -13,8 +13,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allTopics = [] }) {
-  const title =
-    "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
+  const title = `Abhinav VP | Blog | ${allTopics.length} Topics | ReactJs, Nextjs, HTML5, CSS3`;
   const description =
     "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
   return (
@@ -44,9 +43,7 @@ export default function Home({ allTopics = [] }) {
 
       <section>
         <h1>Topics</h1>
-        <h2>
-          {`Welcome to my Blog ! I'll be mostly talking about web development.`}
-        </h2>
+        <h2>{`Read blogs from ${allTopics.length} topics`}</h2>
         <hr />
       </section>
       <section>
