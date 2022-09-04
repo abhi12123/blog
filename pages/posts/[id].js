@@ -3,6 +3,7 @@ import Link from "next/link";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import { generateSlug } from "../../utils/generators";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -51,9 +52,25 @@ export default function Post({ postData }) {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        <Date dateString={postData.date} /> 📅
-        <br />
-        <span>{postData.time} minutes 🕒</span>
+        <ul>
+          <li>
+            <Date dateString={postData.date} /> 📅
+          </li>
+          <li>{postData.time} minutes 🕒</li>
+          <li>
+            {postData.topics
+              .map((topic) => {
+                return (
+                  <Link href={`/topics/${generateSlug(topic)}`}>
+                    <a>{`#${generateSlug(topic)}`}</a>
+                  </Link>
+                );
+              })
+              .reduce((accu, elem) => {
+                return accu === null ? [elem] : [...accu, ", ", elem];
+              }, null)}
+          </li>
+        </ul>
         <hr />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
