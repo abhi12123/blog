@@ -2,6 +2,7 @@
 title: "4 JavaScript Tips for Shorter Code"
 date: "2021-11-21"
 description: "There are plenty of tips which can be followed to make the JavaScript code shorter as well less complicated. I will share four of such tips which have reduced the effort and development time for me a lot while coding."
+topics: ["JavaScript", "Web Development"]
 ---
 
 There are plenty of tips which can be followed to make the JavaScript code shorter as well less complicated. I will share four of such tips which have reduced the effort and development time for me a lot while coding.
