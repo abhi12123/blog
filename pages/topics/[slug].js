@@ -2,13 +2,20 @@ import Head from "next/head";
 import Link from "next/link";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
-import { getAllTopicSlugs, getPostsByTopic } from "../../lib/topics";
+import {
+  getAllTopicSlugs,
+  getPostsByTopic,
+  getTopicDetails,
+} from "../../lib/topics";
 
 export async function getStaticProps({ params }) {
   const postsByTopic = await getPostsByTopic(params.slug);
+  const topicDetails = await getTopicDetails(params.slug);
+  console.log("the params", topicDetails);
   return {
     props: {
       postsByTopic,
+      topicDetails,
     },
   };
 }
@@ -21,11 +28,9 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postsByTopic }) {
-  const title =
-    "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
-  const description =
-    "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
+export default function Post({ postsByTopic, topicDetails }) {
+  const title = `Abhinav VP | ${topicDetails.name} | ${topicDetails.postsCount} Articles | ReactJs, Nextjs, HTML5, CSS3`;
+  const description = `Web Developer Blog by Abhinav VP, a web developer based in India. This page has the collection of ${topicDetails.postsCount} under the topic ${topicDetails.name}`;
   return (
     <Layout home>
       <Head>
@@ -50,12 +55,9 @@ export default function Post({ postsByTopic }) {
         <meta name="twitter:site" content="@abhi_vp_" />
         <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
-
       <section>
-        <h1>{`Abhinav's Blog`}</h1>
-        <h2>
-          {`Welcome to my Blog ! I'll be mostly talking about web development.`}
-        </h2>
+        <h1>{topicDetails.name}</h1>
+        <h2>{`${topicDetails.postsCount} articles under the topic ${topicDetails.name}`}</h2>
         <hr />
       </section>
       <section>
