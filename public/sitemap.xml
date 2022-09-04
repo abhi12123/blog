@@ -1,1 +1,87 @@
-https://www.abhinavvp.com/ 2022-09-04T18:12:53+00:00 1.00 https://www.abhinavvp.com/topics 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/react-18 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/portfolio-website-using-only-html 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/why-you-should-use-error-boundaries-in-react 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/another-4-javascript-tips-for-shorter-code 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/4-javascript-tips-for-shorter-code 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/how-react-rethinks-best-practices 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/react-explained-and-made-simple 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/posts/using-clamp-for-responsiveness 2022-09-04T18:12:53+00:00 0.80 https://www.abhinavvp.com/topics/web-development 2022-09-04T18:12:53+00:00 0.64 https://www.abhinavvp.com/topics/reactjs 2022-09-04T18:12:53+00:00 0.64 https://www.abhinavvp.com/topics/javascript 2022-09-04T18:12:53+00:00 0.64 https://www.abhinavvp.com/topics/html 2022-09-04T18:12:53+00:00 0.64 https://www.abhinavvp.com/topics/css 2022-09-04T18:12:53+00:00 0.64
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.abhinavvp.com/</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/react-18</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/portfolio-website-using-only-html</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/why-you-should-use-error-boundaries-in-react</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/another-4-javascript-tips-for-shorter-code</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/4-javascript-tips-for-shorter-code</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/how-react-rethinks-best-practices</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/react-explained-and-made-simple</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/posts/using-clamp-for-responsiveness</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics/web-development</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics/reactjs</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics/javascript</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics/html</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.abhinavvp.com/topics/css</loc>
+  <lastmod>2022-09-04T18:27:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
