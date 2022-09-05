@@ -1,5 +1,0 @@
-
-User-agent: *
-Allow: /
-
-Sitemap: http://www.abhinavvp.com/sitemap.xml
