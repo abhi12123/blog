@@ -32,7 +32,7 @@ export default function Navbar({ trendingTopics }) {
         </p>
         {trendingTopics?.map((topic) => {
           return (
-            <Link href={`/topics/${topic.slug}`}>
+            <Link href={`/topics/${topic.slug}`} key={topic.slug}>
               <a className="topic">
                 #{topic.name}({topic.postsCount})
               </a>

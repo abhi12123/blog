@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <section className="about-section">
-      <div class="pixel"></div>
+      <div className="pixel"></div>
       <div className="details">
         <p>
           A web developer based in <b>Kerala, India</b> 📍
@@ -11,7 +11,7 @@ export default function About() {
         <p>
           Currently working in{" "}
           <b>
-            <a target={"_blank"} href="https://typeset.io/">
+            <a target={"_blank"} href="https://typeset.io/" rel="noreferrer">
               SciSpace
             </a>
           </b>{" "}

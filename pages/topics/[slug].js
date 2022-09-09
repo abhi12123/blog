@@ -63,7 +63,7 @@ export default function Post({ postsByTopic, topicDetails, allTopics }) {
       <section>
         <ul className="blog-list">
           {postsByTopic?.map((postData) => (
-            <BlogListEntry postData={postData} />
+            <BlogListEntry postData={postData} key={postData.id} />
           ))}
         </ul>
       </section>

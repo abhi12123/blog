@@ -56,7 +56,7 @@ export default function Home({ allPostsData, allTopics }) {
       <section>
         <ul className="blog-list">
           {allPostsData?.map((postData) => (
-            <BlogListEntry postData={postData} />
+            <BlogListEntry postData={postData} key={postData.id} />
           ))}
         </ul>
       </section>
