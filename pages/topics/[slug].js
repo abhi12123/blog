@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
-import Date from "../../components/date";
+import BlogListEntry from "../../components/blogListEntry";
 import Layout from "../../components/layout";
 import {
+  getAllTopics,
   getAllTopicSlugs,
   getPostsByTopic,
   getTopicDetails,
@@ -11,11 +11,12 @@ import {
 export async function getStaticProps({ params }) {
   const postsByTopic = await getPostsByTopic(params.slug);
   const topicDetails = await getTopicDetails(params.slug);
-  console.log("the params", topicDetails);
+  const allTopics = await getAllTopics(params.slug);
   return {
     props: {
       postsByTopic,
       topicDetails,
+      allTopics,
     },
   };
 }
@@ -28,11 +29,11 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postsByTopic, topicDetails }) {
+export default function Post({ postsByTopic, topicDetails, allTopics }) {
   const title = `Abhinav VP | ${topicDetails.name} | ${topicDetails.postsCount} Articles | ReactJs, Nextjs, HTML5, CSS3`;
   const description = `Web Developer Blog by Abhinav VP, a web developer based in India. This page has the collection of ${topicDetails.postsCount} under the topic ${topicDetails.name}`;
   return (
-    <Layout home>
+    <Layout trendingTopics={allTopics.slice(0, 4)}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -56,22 +57,13 @@ export default function Post({ postsByTopic, topicDetails }) {
         <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
       <section>
-        <h1>{topicDetails.name}</h1>
-        <h2>{`${topicDetails.postsCount} articles under the topic ${topicDetails.name}`}</h2>
-        <hr />
+        <h1 className="title1">{topicDetails.name}</h1>
+        <h2>{`${topicDetails.postsCount} articles under the topic "${topicDetails.name}"`}</h2>
       </section>
       <section>
-        <ul>
-          {postsByTopic?.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
-            </li>
+        <ul className="blog-list">
+          {postsByTopic?.map((postData) => (
+            <BlogListEntry postData={postData} />
           ))}
         </ul>
       </section>

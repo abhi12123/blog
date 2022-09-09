@@ -12,12 +12,12 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allTopics = [] }) {
+export default function Home({ allTopics }) {
   const title = `Abhinav VP | Blog | ${allTopics.length} Topics | ReactJs, Nextjs, HTML5, CSS3`;
   const description =
     "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
   return (
-    <Layout home>
+    <Layout trendingTopics={allTopics.slice(0, 4)}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -42,15 +42,14 @@ export default function Home({ allTopics = [] }) {
       </Head>
 
       <section>
-        <h1>Topics</h1>
-        <h2>{`Read blogs from ${allTopics.length} topics`}</h2>
-        <hr />
+        <h1 className="title1">Topics</h1>
+        <h2>{`Read from ${allTopics.length} topics`}</h2>
       </section>
       <section>
-        <ul>
+        <ul className="blog-list">
           {allTopics.map((topic, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="blog-list-entry">
                 <Link href={`/topics/${topic.slug}`}>
                   <a>
                     {topic.name}({topic.postsCount})

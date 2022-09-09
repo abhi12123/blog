@@ -1,25 +1,27 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
+import { getAllTopics } from "../lib/topics";
+import BlogListEntry from "../components/blogListEntry";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const allTopics = getAllTopics();
   return {
     props: {
       allPostsData,
+      allTopics,
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, allTopics }) {
   const title =
     "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
   const description =
     "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
   return (
-    <Layout home>
+    <Layout trendingTopics={allTopics.slice(0, 4)}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -43,30 +45,18 @@ export default function Home({ allPostsData }) {
         <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
 
-      <section>
-        <h1>{`Abhinav's Blog`}</h1>
-        <h2>
-          {`Welcome to my Blog ! I'll be mostly talking about web development.`}
+      <section className="landing-page-hero">
+        <h1 className="title1">
+          Abhinav&nbsp;VP, <small>Web&nbsp;Developer&nbsp;👨‍💻</small>
+        </h1>
+        <h2 className="title2">
+          <span className="wave">👋</span> Welcome to my Blog !
         </h2>
-        <h3>
-          <Link href="/topics">
-            <a>👉 Read from Topics 📚</a>
-          </Link>
-        </h3>
-        <hr />
       </section>
       <section>
-        <ul>
-          {allPostsData?.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
-            </li>
+        <ul className="blog-list">
+          {allPostsData?.map((postData) => (
+            <BlogListEntry postData={postData} />
           ))}
         </ul>
       </section>

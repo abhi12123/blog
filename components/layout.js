@@ -1,23 +1,19 @@
-import Link from "next/link";
+import About from "./aside";
+import Navbar from "./navbar";
 
-export default function Layout({ children }) {
+export default function Layout({ children, trendingTopics }) {
   return (
-    <div>
-      <nav className="navbar">
-        <Link href="/">
-          <a>
-            <h3>Abhinav VP</h3>
-          </a>
-        </Link>
-        <Link href="https://about.abhinavvp.com">
-          <a>About</a>
-        </Link>
-      </nav>
-      <main>{children}</main>
+    <>
+      <Navbar trendingTopics={trendingTopics} />
+      <div className="layout-body">
+        <main>{children}</main>
+        <aside>
+          <About />
+        </aside>
+      </div>
       <footer>
-        <hr />
         <small>made using Next.js</small>
       </footer>
-    </div>
+    </>
   );
 }

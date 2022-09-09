@@ -3,13 +3,16 @@ import Link from "next/link";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllTopics } from "../../lib/topics";
 import { generateSlug } from "../../utils/generators";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
+  const allTopics = await getAllTopics(params.slug);
   return {
     props: {
       postData,
+      allTopics,
     },
   };
 }
@@ -22,9 +25,9 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData }) {
+export default function Post({ postData, allTopics }) {
   return (
-    <Layout>
+    <Layout trendingTopics={allTopics.slice(0, 4)}>
       <Head>
         <title>{postData.title} | Abhinav VP | Web development</title>
         <meta name="description" content={postData.description} />
@@ -50,14 +53,15 @@ export default function Post({ postData }) {
         <meta name="twitter:site" content="@abhi_vp_" />
         <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <ul>
+      <article className="article">
+        <h1 className="title1">{postData.title}</h1>
+        <ul className="article-meta">
           <li>
-            <Date dateString={postData.date} /> 📅
+            📅 <Date dateString={postData.date} />
           </li>
-          <li>{postData.time} minutes 🕒</li>
+          <li>🕒 {postData.time} minutes </li>
           <li>
+            🔗{" "}
             {postData.topics
               .map((topic, index) => {
                 return (
@@ -79,8 +83,7 @@ export default function Post({ postData }) {
           <Link href={`/posts/${postData.prevPost.id}`}>
             <a>
               <div className="nav-item prev-post">
-                <small>⬅️ Previous Post</small>
-                <p>{postData.prevPost.title}</p>
+                <p>⬅️ {postData.prevPost.title}</p>
               </div>
             </a>
           </Link>
@@ -89,8 +92,7 @@ export default function Post({ postData }) {
           <Link href={`/posts/${postData.nextPost.id}`}>
             <a>
               <div className="nav-item next-post">
-                <small>Next Post ➡️</small>
-                <p>{postData.nextPost.title}</p>
+                <p>{postData.nextPost.title} ➡️</p>
               </div>
             </a>
           </Link>
