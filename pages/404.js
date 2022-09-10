@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import MetaTags from "../components/metaTags";
 const Layout = dynamic(() => import("../components/layout"));
 
 export default function Home() {
@@ -11,27 +12,11 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{title}</title>
-        {/* <html lang="en" /> */}
-        <meta name="description" content={description} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta
-          property="og:image"
-          content="https://about.abhinavvp.com/images/profile-pic.jpg"
+        <MetaTags
+          title={title}
+          description={description}
+          contentLink={"https://www.abhinavvp.com/"}
         />
-        <meta property="og:url" content="https://www.abhinavvp.com/" />
-        <meta property="og:site_name" content={title} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta
-          name="twitter:image"
-          content="https://about.abhinavvp.com/images/profile-pic.jpg"
-        />
-        <meta name="twitter:site" content="@abhi_vp_" />
-        <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
       <section className="error404">
         <h1>404</h1>

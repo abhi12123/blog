@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import MetaTags from "../../components/metaTags";
 const Date = dynamic(() => import("../../components/date"));
 const Layout = dynamic(() => import("../../components/layout"));
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -27,30 +28,11 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title} | Abhinav VP | Web development</title>
-        {/* <html lang="en" /> */}
-        <meta name="description" content={postData.description} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={postData.title} />
-        <meta property="og:description" content={postData.description} />
-        <meta
-          property="og:image"
-          content="https://about.abhinavvp.com/images/profile-pic.jpg"
+        <MetaTags
+          title={postData.title}
+          description={postData.description}
+          contentLink={`https://www.abhinavvp.com/posts/${postData.id}`}
         />
-        <meta
-          property="og:url"
-          content={`https://www.abhinavvp.com/posts/${postData.id}`}
-        />
-        <meta property="og:site_name" content={postData.title} />
-        <meta name="twitter:title" content={postData.title} />
-        <meta name="twitter:description" content={postData.description} />
-        <meta
-          name="twitter:image"
-          content="https://about.abhinavvp.com/images/profile-pic.jpg"
-        />
-        <meta name="twitter:site" content="@abhi_vp_" />
-        <meta name="twitter:creator" content="@abhi_vp_" />
       </Head>
       <article className="article">
         <h1 className="title1">{postData.title}</h1>
