@@ -20,7 +20,7 @@ export default function Home({ allTopics }) {
     <Layout>
       <Head>
         <title>{title}</title>
-        <html lang="en" />
+        {/* <html lang="en" /> */}
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="article" />
