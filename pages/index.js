@@ -1,27 +1,25 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import Layout from "../components/layout";
+const Layout = dynamic(() => import("../components/layout"));
+const BlogListEntry = dynamic(() => import("../components/blogListEntry"));
 import { getSortedPostsData } from "../lib/posts";
-import { getAllTopics } from "../lib/topics";
-import BlogListEntry from "../components/blogListEntry";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const allTopics = getAllTopics();
   return {
     props: {
       allPostsData,
-      allTopics,
     },
   };
 }
 
-export default function Home({ allPostsData, allTopics }) {
+export default function Home({ allPostsData }) {
   const title =
     "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
   const description =
     "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
   return (
-    <Layout trendingTopics={allTopics.slice(0, 4)}>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

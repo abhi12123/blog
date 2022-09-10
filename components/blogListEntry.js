@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import Date from "./date";
+const Date = dynamic(() => import("./date"));
 
 export default function BlogListEntry({ postData }) {
   const { id, title, description, date } = postData;

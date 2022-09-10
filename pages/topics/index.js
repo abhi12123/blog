@@ -1,7 +1,8 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../../components/layout";
 import { getAllTopics } from "../../lib/topics";
+const Layout = dynamic(() => import("../../components/layout"));
 
 export async function getStaticProps() {
   const allTopics = getAllTopics();
@@ -17,7 +18,7 @@ export default function Home({ allTopics }) {
   const description =
     "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
   return (
-    <Layout trendingTopics={allTopics.slice(0, 4)}>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

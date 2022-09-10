@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import BlogListEntry from "../../components/blogListEntry";
-import Layout from "../../components/layout";
+import Link from "next/link";
+const BlogListEntry = dynamic(() => import("../../components/blogListEntry"));
+const Layout = dynamic(() => import("../../components/layout"));
+
 import {
-  getAllTopics,
   getAllTopicSlugs,
   getPostsByTopic,
   getTopicDetails,
@@ -11,12 +13,10 @@ import {
 export async function getStaticProps({ params }) {
   const postsByTopic = await getPostsByTopic(params.slug);
   const topicDetails = await getTopicDetails(params.slug);
-  const allTopics = await getAllTopics(params.slug);
   return {
     props: {
       postsByTopic,
       topicDetails,
-      allTopics,
     },
   };
 }
@@ -29,11 +29,11 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postsByTopic, topicDetails, allTopics }) {
+export default function Post({ postsByTopic, topicDetails }) {
   const title = `Abhinav VP | ${topicDetails.name} | ${topicDetails.postsCount} Articles | ReactJs, Nextjs, HTML5, CSS3`;
   const description = `Web Developer Blog by Abhinav VP, a web developer based in India. This page has the collection of ${topicDetails.postsCount} under the topic ${topicDetails.name}`;
   return (
-    <Layout trendingTopics={allTopics.slice(0, 4)}>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -59,6 +59,11 @@ export default function Post({ postsByTopic, topicDetails, allTopics }) {
       <section>
         <h1 className="title1">{topicDetails.name}</h1>
         <h2>{`${topicDetails.postsCount} articles under the topic "${topicDetails.name}"`}</h2>
+        <Link href="/topics">
+          <a className="view-topics">
+            <h3>View all topics ✨</h3>
+          </a>
+        </Link>
       </section>
       <section>
         <ul className="blog-list">

@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar({ trendingTopics }) {
+export default function Navbar() {
   const [displayNavbar, setDisplayNavbar] = useState(false);
   const handleDisplayNavbar = () => {
     setDisplayNavbar(!displayNavbar);
   };
+
+  const trendingTopics = [
+    { slug: "web-development", name: "Web Development" },
+    { slug: "reactjs", name: "ReactJs" },
+    { slug: "javascript", name: "JavaScript" },
+    { slug: "html", name: "HTML" },
+  ];
+
   return (
     <nav className="navbar">
       <section className="navbar-container logo-name">
@@ -33,9 +41,7 @@ export default function Navbar({ trendingTopics }) {
         {trendingTopics?.map((topic) => {
           return (
             <Link href={`/topics/${topic.slug}`} key={topic.slug}>
-              <a className="topic">
-                #{topic.name}({topic.postsCount})
-              </a>
+              <a className="topic">#{topic.name}</a>
             </Link>
           );
         })}

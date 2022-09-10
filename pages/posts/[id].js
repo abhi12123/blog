@@ -1,18 +1,16 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
-import Date from "../../components/date";
-import Layout from "../../components/layout";
+const Date = dynamic(() => import("../../components/date"));
+const Layout = dynamic(() => import("../../components/layout"));
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import { getAllTopics } from "../../lib/topics";
 import { generateSlug } from "../../utils/generators";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
-  const allTopics = await getAllTopics(params.slug);
   return {
     props: {
       postData,
-      allTopics,
     },
   };
 }
@@ -25,9 +23,9 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData, allTopics }) {
+export default function Post({ postData }) {
   return (
-    <Layout trendingTopics={allTopics.slice(0, 4)}>
+    <Layout>
       <Head>
         <title>{postData.title} | Abhinav VP | Web development</title>
         <meta name="description" content={postData.description} />

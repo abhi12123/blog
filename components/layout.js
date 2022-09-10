@@ -1,10 +1,12 @@
-import About from "./aside";
-import Navbar from "./navbar";
+import dynamic from "next/dynamic";
 
-export default function Layout({ children, trendingTopics }) {
+const About = dynamic(() => import("./about"));
+const Navbar = dynamic(() => import("./navbar"));
+
+export default function Layout({ children }) {
   return (
     <>
-      <Navbar trendingTopics={trendingTopics} />
+      <Navbar />
       <div className="layout-body">
         <main>{children}</main>
         <aside>
