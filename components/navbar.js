@@ -36,7 +36,7 @@ export default function Navbar() {
           id="topics-label"
           onClick={handleDisplayNavbar}
         >
-          Trending topics ✨<span className="wave">👉</span>
+          Trending topics ✨
         </p>
         {trendingTopics?.map((topic) => {
           return (
