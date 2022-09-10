@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
   const title =
     "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
   const description =
-    "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
+    "Blog by Abhinav VP, a web developer based in India, created using NextJs. The blog will mostly discuss about Web development and other related topics.";
   return (
     <Layout>
       <Head>

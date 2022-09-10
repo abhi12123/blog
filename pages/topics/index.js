@@ -15,8 +15,7 @@ export async function getStaticProps() {
 
 export default function Home({ allTopics }) {
   const title = `Abhinav VP | Blog | ${allTopics.length} Topics | ReactJs, Nextjs, HTML5, CSS3`;
-  const description =
-    "Web Developer Blog by Abhinav VP, a web developer based in India. The Blog is created using NextJs. The blog will mostly discuss about Web development and occasionally other topics which might help developer career. The topics include Next.JS, ReactJs, HTML5, CSS3 etc";
+  const description = `Web Developer Blog by Abhinav VP, a web developer based in India. Webpage lists available topics in the blog. There are a total of ${allTopics.length} topics in the blog.`;
   return (
     <Layout>
       <Head>
