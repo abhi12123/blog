@@ -28,6 +28,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title} | Abhinav VP | Web development</title>
+        <html lang="en" />
         <meta name="description" content={postData.description} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="article" />

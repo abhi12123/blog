@@ -12,6 +12,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>{title}</title>
+        <html lang="en" />
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="article" />
