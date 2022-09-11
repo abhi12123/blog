@@ -348,6 +348,7 @@ function MyApp({ Component, pageProps }) {
           color: #b54200;
           padding: 2px 4px;
           border-radius: 3px;
+          overflow-wrap: break-word;
         }
         .view-topics {
           text-decoration: none;
