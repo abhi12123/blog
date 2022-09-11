@@ -114,7 +114,7 @@ function MyApp({ Component, pageProps }) {
           font-size: 40px;
         }
         .landing-page-hero h1 small {
-          color: #d5d5d5;
+          color: #963737;
         }
         .landing-page-hero h2 {
           margin: 0;
