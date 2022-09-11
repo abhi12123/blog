@@ -350,6 +350,22 @@ footer{
   img, pre{
     max-width: 100%;
     overflow: scroll;
+    code{
+      background: none;
+      color: inherit;
+    }
+  }
+  pre{
+    background-color: rgb(0, 60, 10);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  code{
+    background: rgb(228, 227, 227);
+    color: rgb(181, 66, 0);
+    padding: 2px 4px;
+    border-radius: 3px;
   }
 }
 

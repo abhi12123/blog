@@ -1,9 +1,19 @@
+import Head from "next/head";
 import Script from "next/script";
 // import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
+  const defaultTitle =
+    "Abhinav VP | Web Devolper | Blog | ReactJs, JavaScript, CSS";
   return (
     <>
+      <Head>
+        <title>
+          {pageProps?.postData?.title
+            ? pageProps?.postData?.title + " " + defaultTitle
+            : defaultTitle}
+        </title>
+      </Head>
       <Component {...pageProps} />
       <style jsx global>{`
         html,
@@ -104,7 +114,7 @@ function MyApp({ Component, pageProps }) {
           font-size: 40px;
         }
         .landing-page-hero h1 small {
-          color: #963737;
+          color: #d5d5d5;
         }
         .landing-page-hero h2 {
           margin: 0;
@@ -321,6 +331,23 @@ function MyApp({ Component, pageProps }) {
         .article pre {
           max-width: 100%;
           overflow: scroll;
+        }
+        .article img code,
+        .article pre code {
+          background: none;
+          color: inherit;
+        }
+        .article pre {
+          background-color: #003c0a;
+          color: white;
+          padding: 8px 12px;
+          border-radius: 3px;
+        }
+        .article code {
+          background: #e4e3e3;
+          color: #b54200;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
         .view-topics {
           text-decoration: none;
