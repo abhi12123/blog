@@ -10,18 +10,12 @@ export default function MetaTags({ title, description, contentLink }) {
       />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta
-        property="og:image"
-        content="https://about.abhinavvp.com/images/profile-pic.jpg"
-      />
+      <meta property="og:image" content="/images/profile-pic.png" />
       <meta property="og:url" content={contentLink} />
       <meta property="og:site_name" content={title} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta
-        name="twitter:image"
-        content="https://about.abhinavvp.com/images/profile-pic.jpg"
-      />
+      <meta name="twitter:image" content="/images/profile-pic.png" />
       <meta name="twitter:site" content="@abhi_vp_" />
       <meta name="twitter:creator" content="@abhi_vp_" />
     </>
