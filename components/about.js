@@ -5,7 +5,7 @@ import {
   MAIL_ID,
   SCISPACE_URL,
   TWITTER_ID,
-} from "../pages/constants";
+} from "../utils/constants";
 
 export default function About() {
   return (
