@@ -1,4 +1,11 @@
 import Link from "next/link";
+import {
+  GITHUB_ID,
+  LINKEDIN_ID,
+  MAIL_ID,
+  SCISPACE_URL,
+  TWITTER_ID,
+} from "../pages/constants";
 
 export default function About() {
   return (
@@ -11,7 +18,7 @@ export default function About() {
         <p>
           Currently working in{" "}
           <b>
-            <a target={"_blank"} href="https://typeset.io/" rel="noreferrer">
+            <a target={"_blank"} href={SCISPACE_URL} rel="noreferrer">
               SciSpace
             </a>
           </b>{" "}
@@ -20,19 +27,19 @@ export default function About() {
         <p>
           <b>Feel free to reach out to me ! 📚</b>
           <br />
-          <Link href="https://www.linkedin.com/in/abhinavvp/">
+          <Link href={`https://www.linkedin.com/in/${LINKEDIN_ID}`}>
             <a>Linkedin 🔗 </a>
           </Link>
           <br />
-          <Link href="https://github.com/abhi12123">
+          <Link href={`https://github.com/${GITHUB_ID}`}>
             <a>Github 🔗 </a>
           </Link>
           <br />
-          <Link href="mailto:vp.abhinav@outlook.com">
+          <Link href={`mailto:${MAIL_ID}`}>
             <a>Email 🔗 </a>
           </Link>
           <br />
-          <Link href="https://twitter.com/abhi_vp_">
+          <Link href={`https://twitter.com/${TWITTER_ID}`}>
             <a>Twitter 🔗 </a>
           </Link>
         </p>

@@ -1,7 +1,5 @@
-import dynamic from "next/dynamic";
-
-const About = dynamic(() => import("./about"));
-const Navbar = dynamic(() => import("./navbar"));
+import About from "./about";
+import Navbar from "./navbar";
 
 export default function Layout({ children }) {
   return (

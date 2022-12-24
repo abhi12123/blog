@@ -1,15 +1,16 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../../components/layout";
 import MetaTags from "../../components/metaTags";
 const BlogListEntry = dynamic(() => import("../../components/blogListEntry"));
-const Layout = dynamic(() => import("../../components/layout"));
 
 import {
   getAllTopicSlugs,
   getPostsByTopic,
   getTopicDetails,
 } from "../../lib/topics";
+import { DEFAULT_DESCRIPTION, SITE_NAME } from "../constants";
 
 export async function getStaticProps({ params }) {
   const postsByTopic = await getPostsByTopic(params.slug);
@@ -32,14 +33,14 @@ export async function getStaticPaths() {
 
 export default function Post({ postsByTopic, topicDetails }) {
   const title = `Abhinav VP | ${topicDetails.name} | ${topicDetails.postsCount} Articles | ReactJs, Nextjs, HTML5, CSS3`;
-  const description = `Web Developer Blog by Abhinav VP, a web developer based in India. This page has the collection of ${topicDetails.postsCount} under the topic ${topicDetails.name}`;
+  const description = `${DEFAULT_DESCRIPTION} This page has the collection of ${topicDetails.postsCount} under the topic ${topicDetails.name}`;
   return (
     <Layout>
       <Head>
         <MetaTags
           title={title}
           description={description}
-          contentLink={`https://www.abhinavvp.com/posts/${topicDetails.slug}`}
+          contentLink={`${SITE_NAME}/posts/${topicDetails.slug}`}
         />
       </Head>
       <section>

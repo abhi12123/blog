@@ -22,7 +22,7 @@ export default function Navbar() {
             <h3>Abhinav VP</h3>
           </a>
         </Link>
-        <Link href="https://about.abhinavvp.com">
+        <Link href="/">
           <a>About</a>
         </Link>
       </section>

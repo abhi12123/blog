@@ -3,6 +3,13 @@ title: "Another 4 JavaScript Tips for Shorter Code"
 date: "2021-11-28"
 description: "4 more javascript tricks. This is continuation to my older acrticle on javascript"
 topics: ["JavaScript", "Web Development"]
+otherSourcesNames: ["medium", "hashnode", "devTo"]
+otherSourcesUrls:
+  [
+    "/another-4-javascript-tips-for-shorter-code-64791c1111b4",
+    "/another-4-javascript-tips-for-shorter-code",
+    "/another-4-javascript-tips-for-shorter-code-2k9c",
+  ]
 ---
 
 This is a continuation to my earlier article : [4 JavaScript tips for shorter code](https://abhinavvp.com/posts/4-javascript-tips-for-shorter-code/)

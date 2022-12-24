@@ -1,9 +1,10 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Layout from "../components/layout";
 import MetaTags from "../components/metaTags";
-const Layout = dynamic(() => import("../components/layout"));
 const BlogListEntry = dynamic(() => import("../components/blogListEntry"));
 import { getSortedPostsData } from "../lib/posts";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "./constants";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,17 +16,17 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const title =
-    "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
+  const title = DEFAULT_TITILE;
   const description =
-    "Blog by Abhinav VP, a web developer based in India, created using NextJs. The blog will mostly discuss about Web development and other related topics.";
+    DEFAULT_DESCRIPTION +
+    " The blog will mostly discuss about Web development and other related topics.";
   return (
     <Layout>
       <Head>
         <MetaTags
           title={title}
           description={description}
-          contentLink="https://www.abhinavvp.com/"
+          contentLink={SITE_NAME}
         />
       </Head>
 

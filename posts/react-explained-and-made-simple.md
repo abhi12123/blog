@@ -5,6 +5,13 @@ description: "As per the landing page of React , it is a JavaScript library to b
 Angular, Vue, Next.js, Gatsby, Redwood.js etc are examples for frameworks. A framework includes resources that a large-scale application might need : creating forms, running automated tests, making network requests etc.
 Whereas React itself does not include many of these functionalities. Core react is used only to build User Interfaces. In order to build complete React applications, you will need to choose the required packages and tools on your own. For example, for forms and validation React Hook Form or Formik can be used and for testing React Testing Library or Jest can be used."
 topics: ["ReactJs", "Web Development"]
+otherSourcesNames: ["medium", "hashnode", "devTo"]
+otherSourcesUrls:
+  [
+    "/react-explained-and-made-simple-94a1375dfec5",
+    "/react-explained-and-made-simple",
+    "/react-explained-and-made-simple-21me",
+  ]
 ---
 
 ![React landing page image](https://cdn.hashnode.com/res/hashnode/image/upload/v1635659888350/RiQ52UEMy.png)

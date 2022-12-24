@@ -12,9 +12,11 @@ export default function BlogListEntry({ postData }) {
         </a>
       </Link>
       <p>{description.slice(0, 200)}...</p>
-      <small>
-        <Date dateString={date} />
-      </small>
+      {date ? (
+        <small>
+          <Date dateString={date} />
+        </small>
+      ) : null}
     </li>
   );
 }

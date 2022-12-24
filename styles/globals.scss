@@ -347,6 +347,7 @@ footer{
 }
 
 .article{
+  position: relative;
   img, pre{
     max-width: 100%;
     overflow: scroll;
@@ -396,4 +397,19 @@ footer{
     border-radius: 5px;
     cursor: pointer;
   }
+}
+
+.share-buttons{
+  position: sticky;
+  display: flex;
+  top: 0;
+  left: 0px;
+  justify-content: space-around;
+  background-color: $primary-color;
+  padding: 10px 80px;
+}
+
+.other-sources{
+  background-color: $primary-color;
+  padding: 10px;
 }

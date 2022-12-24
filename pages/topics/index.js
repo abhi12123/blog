@@ -1,9 +1,9 @@
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../../components/layout";
 import MetaTags from "../../components/metaTags";
 import { getAllTopics } from "../../lib/topics";
-const Layout = dynamic(() => import("../../components/layout"));
+import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "../constants";
 
 export async function getStaticProps() {
   const allTopics = getAllTopics();
@@ -15,15 +15,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allTopics }) {
-  const title = `Abhinav VP | Blog | ${allTopics.length} Topics | ReactJs, Nextjs, HTML5, CSS3`;
-  const description = `Web Developer Blog by Abhinav VP, a web developer based in India. Webpage lists available topics in the blog. There are a total of ${allTopics.length} topics in the blog.`;
+  const title = `${DEFAULT_TITILE} | ${allTopics.length} Topics | ReactJs, Nextjs, HTML5, CSS3`;
+  const description = `${DEFAULT_DESCRIPTION}. Webpage lists available topics in the blog. There are a total of ${allTopics.length} topics in the blog.`;
   return (
     <Layout>
       <Head>
         <MetaTags
           title={title}
           description={description}
-          contentLink="https://www.abhinavvp.com/topics"
+          contentLink={SITE_NAME + "/topics"}
         />
       </Head>
 

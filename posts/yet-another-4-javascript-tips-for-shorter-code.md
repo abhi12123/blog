@@ -3,6 +3,13 @@ title: "Yet another 4 JavaScript tips for shorter code"
 date: "2022-09-11"
 description: "Seems like JavaScript never ceases to surprise me, perhaps that would explain why I’m writing another blog on JavaScript tips. This will be my continuation to my previous two blogs on the same topic"
 topics: ["JavaScript", "Web Development"]
+# otherSourcesNames: ["medium", "hashnode", "devTo"]
+# otherSourcesUrls:
+#   [
+#     "https://medium.com/@abhinav_vp/",
+#     "https://medium.com/@abhinav_vp/",
+#     "https://dev.to/abhi_vp_/using-clamp-for-responsiveness-3bem",
+#   ]
 ---
 
 Seems like JavaScript never ceases to surprise me, perhaps that would explain why I’m writing another blog on JavaScript tips, and I honestly don't see this blog series ending in near future.

@@ -1,17 +1,17 @@
 import Head from "next/head";
 import Script from "next/script";
+// comment out for style changes
 // import "../styles/globals.scss";
+import { DEFAULT_TITILE, GOOGLE_ANALYTICS_ID } from "./constants";
 
 function MyApp({ Component, pageProps }) {
-  const defaultTitle =
-    "Abhinav VP | Web Devolper | Blog | ReactJs, JavaScript, CSS";
   return (
     <>
       <Head>
         <title>
           {pageProps?.postData?.title
-            ? pageProps?.postData?.title + " " + defaultTitle
-            : defaultTitle}
+            ? pageProps?.postData?.title + " " + DEFAULT_TITILE
+            : DEFAULT_TITILE}
         </title>
       </Head>
       <Component {...pageProps} />
@@ -327,6 +327,9 @@ function MyApp({ Component, pageProps }) {
           color: inherit;
           text-decoration: none;
         }
+        .article {
+          position: relative;
+        }
         .article img,
         .article pre {
           max-width: 100%;
@@ -376,10 +379,23 @@ function MyApp({ Component, pageProps }) {
           border-radius: 5px;
           cursor: pointer;
         }
+        .share-buttons {
+          position: sticky;
+          display: flex;
+          top: 0;
+          left: 0px;
+          justify-content: space-around;
+          background-color: #d5d5d5;
+          padding: 10px 80px;
+        }
+        .other-sources {
+          background-color: #d5d5d5;
+          padding: 10px;
+        }
       `}</style>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-GZTPXHWFZQ`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
         id="ga-script-1"
       />
       <Script strategy="lazyOnload" id="ga-script-2">
@@ -387,7 +403,7 @@ function MyApp({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'G-GZTPXHWFZQ', {
+                    gtag('config', '${GOOGLE_ANALYTICS_ID}', {
                     page_path: window.location.pathname,
                     });
                 `}

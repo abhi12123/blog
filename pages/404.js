@@ -1,21 +1,20 @@
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../components/layout";
 import MetaTags from "../components/metaTags";
-const Layout = dynamic(() => import("../components/layout"));
+import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "./constants";
 
 export default function Home() {
-  const title =
-    "Abhinav VP | Blog | Web development | ReactJs, Nextjs, HTML5, CSS3";
-  const description =
-    "Blog by Abhinav VP, a web developer based in India, created using NextJs. The blog will mostly discuss about Web development and other related topics. This page is a custom 404 page";
   return (
     <Layout>
       <Head>
         <MetaTags
-          title={title}
-          description={description}
-          contentLink={"https://www.abhinavvp.com/"}
+          title={DEFAULT_TITILE}
+          description={
+            DEFAULT_DESCRIPTION +
+            "The blog will mostly discuss about Web development and other related topics. It seems like the page you are looking for do not exist"
+          }
+          contentLink={SITE_NAME}
         />
       </Head>
       <section className="error404">

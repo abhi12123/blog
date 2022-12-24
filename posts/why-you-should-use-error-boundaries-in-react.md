@@ -3,6 +3,13 @@ title: "Why You Should Use Error Boundaries in React"
 date: "2022-02-12"
 description: "React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app. "
 topics: ["ReactJs", "Web Development"]
+otherSourcesNames: ["medium", "hashnode", "devTo"]
+otherSourcesUrls:
+  [
+    "/why-you-should-use-error-boundaries-in-react-d528dc934d94",
+    "/why-you-should-use-error-boundaries-in-react",
+    "/why-you-should-use-error-boundaries-in-react-1hm3",
+  ]
 ---
 
 React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app.  

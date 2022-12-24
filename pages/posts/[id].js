@@ -1,11 +1,14 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../../components/layout";
 import MetaTags from "../../components/metaTags";
+import OtherSources from "../../components/otherSources";
+import Share from "../../components/share";
 const Date = dynamic(() => import("../../components/date"));
-const Layout = dynamic(() => import("../../components/layout"));
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { generateSlug } from "../../utils/generators";
+import { SITE_NAME } from "../constants";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -26,12 +29,12 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout blog>
       <Head>
         <MetaTags
           title={postData.title}
           description={postData.description}
-          contentLink={`https://www.abhinavvp.com/posts/${postData.id}`}
+          contentLink={`${SITE_NAME}/posts/${postData.id}`}
         />
       </Head>
       <article className="article">
@@ -57,7 +60,15 @@ export default function Post({ postData }) {
           </li>
         </ul>
         <hr />
+        <Share
+          url={`https://www.abhinavvp.com/posts/${postData.id}`}
+          title={postData.title}
+        />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <OtherSources
+          otherSourcesNames={postData.otherSourcesNames}
+          otherSourcesUrls={postData.otherSourcesUrls}
+        />
       </article>
       <nav className="nav-items">
         {postData.prevPost && (
