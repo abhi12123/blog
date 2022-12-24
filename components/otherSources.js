@@ -2,7 +2,7 @@ import {
   DEVTO_PROFILE_URL,
   HASHNODE_PROFILE_URL,
   MEDIUM_PROFILE_URL,
-} from "../utils/constants";
+} from "../../utils/constants";
 
 export default function OtherSources({ otherSourcesNames, otherSourcesUrls }) {
   const otherSourceProfileUrl = {

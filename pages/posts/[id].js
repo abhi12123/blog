@@ -8,7 +8,7 @@ import Share from "../../components/share";
 const Date = dynamic(() => import("../../components/date"));
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { generateSlug } from "../../utils/generators";
-import { SITE_NAME } from "../utils/constants";
+import { SITE_NAME } from "../../utils/constants";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);

@@ -10,7 +10,7 @@ import {
   getPostsByTopic,
   getTopicDetails,
 } from "../../lib/topics";
-import { DEFAULT_DESCRIPTION, SITE_NAME } from "../utils/constants";
+import { DEFAULT_DESCRIPTION, SITE_NAME } from "../../utils/constants";
 
 export async function getStaticProps({ params }) {
   const postsByTopic = await getPostsByTopic(params.slug);
