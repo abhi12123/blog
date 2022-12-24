@@ -6,7 +6,7 @@ import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITILE,
   SITE_NAME,
-} from "../../utils/constants";
+} from "../utils/constants";
 
 export default function Home() {
   return (
