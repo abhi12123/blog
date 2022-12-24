@@ -2,7 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 // comment out for style changes
 // import "../styles/globals.scss";
-import { DEFAULT_TITILE, GOOGLE_ANALYTICS_ID } from "./constants";
+import { DEFAULT_TITILE, GOOGLE_ANALYTICS_ID } from "../utils/constants";
 
 function MyApp({ Component, pageProps }) {
   return (

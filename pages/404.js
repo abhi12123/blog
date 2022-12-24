@@ -2,7 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import MetaTags from "../components/metaTags";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "./constants";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITILE,
+  SITE_NAME,
+} from "../utils/constants";
 
 export default function Home() {
   return (

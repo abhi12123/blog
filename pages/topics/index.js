@@ -3,7 +3,11 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import MetaTags from "../../components/metaTags";
 import { getAllTopics } from "../../lib/topics";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "../constants";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITILE,
+  SITE_NAME,
+} from "../utils/constants";
 
 export async function getStaticProps() {
   const allTopics = getAllTopics();

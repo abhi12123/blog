@@ -4,7 +4,11 @@ import Layout from "../components/layout";
 import MetaTags from "../components/metaTags";
 const BlogListEntry = dynamic(() => import("../components/blogListEntry"));
 import { getSortedPostsData } from "../lib/posts";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITILE, SITE_NAME } from "./constants";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITILE,
+  SITE_NAME,
+} from "../utils/constants";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
