@@ -40,8 +40,8 @@ export default function Home({ allTopics }) {
           {allTopics.map((topic, index) => {
             return (
               <Link href={`/topics/${topic.slug}`}>
-                <a className="blog-list-entry">
-                  <li key={index}>
+                <a className="blog-list-entry" key={index}>
+                  <li>
                     {topic.name}({topic.postsCount})
                   </li>
                 </a>

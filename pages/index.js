@@ -38,7 +38,7 @@ export default function Home({ allPostsData }) {
       <section className="landing-page-hero">
         <h1 className="title1">Welcome to my blog</h1>
         <h2 className="title2">
-          I'm Abhinav, a web developer based in Banglore, India. <br />
+          I&apos;m Abhinav, a web developer based in Banglore, India. <br />
           will be dumping blogs and wierd stuff here. <br />
           You can view all blogs by topic&nbsp;
           <Link href="/topics">
