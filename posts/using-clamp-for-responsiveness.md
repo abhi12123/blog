@@ -4,13 +4,6 @@ date: "2021-11-21"
 description: "Clamp is one of the most useful yet underrated functions in CSS to ensure responsiveness in web design.
 Web pages can be viewed from multiple platforms, and you will have to ensure that the design won't break in any of the viewports. Clamp() is a combination of min() and max(). It takes 3 arguments: the lower limit, the variable, and the upper limit. It clamps a value between the provided lower and upper limit. This ensures that the width remains relative to the viewport at the same time with a lower and upper bound."
 topics: ["CSS", "Web Development"]
-otherSourcesNames: ["medium", "hashnode", "devTo"]
-otherSourcesUrls:
-  [
-    "/using-clamp-for-responsiveness-ea7d40eb1c66",
-    "/using-clamp-for-responsiveness",
-    "/using-clamp-for-responsiveness-3bem",
-  ]
 ---
 
 **Clamp()** is one of the most useful yet underrated functions in CSS to ensure responsiveness in web design.

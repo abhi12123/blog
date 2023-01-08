@@ -9,6 +9,7 @@ import {
   DEFAULT_TITILE,
   SITE_NAME,
 } from "../utils/constants";
+import Link from "next/link";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -35,11 +36,14 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section className="landing-page-hero">
-        <h1 className="title1">
-          Abhinav&nbsp;VP, <small>Web&nbsp;Developer&nbsp;👨‍💻</small>
-        </h1>
+        <h1 className="title1">Welcome to my blog</h1>
         <h2 className="title2">
-          <span className="wave">👋</span> Welcome to my Blog !
+          I'm Abhinav, a web developer based in Banglore, India. <br />
+          will be dumping blogs and wierd stuff here. <br />
+          You can view all blogs by topic&nbsp;
+          <Link href="/topics">
+            <a>here</a>
+          </Link>
         </h2>
       </section>
       <section>

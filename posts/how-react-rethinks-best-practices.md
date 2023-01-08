@@ -3,13 +3,6 @@ title: "How React Rethinks Best Practices"
 date: "2021-11-21"
 description: "React is currently the most popular front-end JavaScript library for building Web applications. It is an open-source JavaScript library that is used for building user interfaces. It renders the UI as per user requirements and plays nicely with any stack. In this article, we shall go through how React rethinks some of the best practices in web development."
 topics: ["ReactJs", "Web Development"]
-otherSourcesNames: ["medium", "hashnode", "devTo"]
-otherSourcesUrls:
-  [
-    "/how-react-rethinks-best-practices-4958b6254df",
-    "/how-react-rethinks-best-practises",
-    "/how-react-rethinks-best-practises-afj",
-  ]
 ---
 
 [React.js](https://reactjs.org/) is currently the most popular front-end JavaScript library for building Web applications. It is an open-source JavaScript library that is used for building user interfaces. It renders the UI as per user requirements and plays nicely with any stack. In this article, we shall go through how React rethinks some of the best practices in web development.

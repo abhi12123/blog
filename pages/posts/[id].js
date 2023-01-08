@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/layout";
 import MetaTags from "../../components/metaTags";
-import OtherSources from "../../components/otherSources";
 import Share from "../../components/share";
 const Date = dynamic(() => import("../../components/date"));
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -39,43 +38,36 @@ export default function Post({ postData }) {
       </Head>
       <article className="article">
         <h1 className="title1">{postData.title}</h1>
-        <ul className="article-meta">
-          <li>
-            📅 <Date dateString={postData.date} />
-          </li>
-          <li>🕒 {postData.time} minutes </li>
-          <li>
-            🔗{" "}
-            {postData.topics
-              .map((topic, index) => {
-                return (
-                  <Link key={index} href={`/topics/${generateSlug(topic)}`}>
-                    <a>{`#${generateSlug(topic)}`}</a>
-                  </Link>
-                );
-              })
-              .reduce((accu, elem) => {
-                return accu === null ? [elem] : [...accu, ", ", elem];
-              }, null)}
-          </li>
-        </ul>
-        <hr />
+        <div className="article-meta">
+          <div>
+            <Date dateString={postData.date} /> - {postData.time} min read
+          </div>
+          <div className="topic-chips">
+            {postData.topics.map((topic, index) => {
+              return (
+                <Link key={index} href={`/topics/${generateSlug(topic)}`}>
+                  <a className="topic-chip">{`#${generateSlug(topic)}`}</a>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
         <Share
           url={`https://www.abhinavvp.com/posts/${postData.id}`}
           title={postData.title}
         />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        <OtherSources
-          otherSourcesNames={postData.otherSourcesNames}
-          otherSourcesUrls={postData.otherSourcesUrls}
-        />
       </article>
       <nav className="nav-items">
         {postData.prevPost && (
           <Link href={`/posts/${postData.prevPost.id}`}>
             <a>
               <div className="nav-item prev-post">
-                <p>⬅️ {postData.prevPost.title}</p>
+                <p>
+                  <small>previous article</small>
+                  <br />
+                  {postData.prevPost.title}
+                </p>
               </div>
             </a>
           </Link>
@@ -84,7 +76,11 @@ export default function Post({ postData }) {
           <Link href={`/posts/${postData.nextPost.id}`}>
             <a>
               <div className="nav-item next-post">
-                <p>{postData.nextPost.title} ➡️</p>
+                <p>
+                  <small>next article</small>
+                  <br />
+                  {postData.nextPost.title}
+                </p>
               </div>
             </a>
           </Link>

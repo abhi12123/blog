@@ -3,13 +3,6 @@ title: "I made a portfolio website using only HTML without any Styles. This is w
 date: "2022-02-27"
 description: "I made a portfolio website using only HTML without any styles. The intention was to push the limits of pure HTML and see its capabilities, and it was worth it. These are some of the things I’ve learned during the process."
 topics: ["HTML", "Web Development"]
-otherSourcesNames: ["medium", "hashnode", "devTo"]
-otherSourcesUrls:
-  [
-    "/i-made-a-portfolio-website-using-only-html-without-any-styles-this-is-what-i-learned-ea4ace140ea4",
-    "/i-made-a-portfolio-website-using-only-html-without-any-styles-this-is-what-i-learned",
-    "/i-made-a-portfolio-website-using-only-html-without-any-styles-this-is-what-i-learned-4ai5",
-  ]
 ---
 
 I made a portfolio website using only HTML without any styles. The intention was to push the limits of pure HTML and see its capabilities, and it was worth it. These are some of the things I’ve learned during the process.

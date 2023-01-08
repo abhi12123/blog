@@ -7,9 +7,6 @@ export default function Layout({ children }) {
       <Navbar />
       <div className="layout-body">
         <main>{children}</main>
-        <aside>
-          <About />
-        </aside>
       </div>
       <footer>
         <small>made using Next.js</small>

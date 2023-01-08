@@ -45,12 +45,7 @@ export default function Post({ postsByTopic, topicDetails }) {
       </Head>
       <section>
         <h1 className="title1">{topicDetails.name}</h1>
-        <h2>{`${topicDetails.postsCount} articles under the topic "${topicDetails.name}"`}</h2>
-        <Link href="/topics">
-          <a className="view-topics">
-            <h3>View all topics ✨</h3>
-          </a>
-        </Link>
+        <h2>{`${topicDetails.postsCount} article(s) under the topic "${topicDetails.name}"`}</h2>
       </section>
       <section>
         <ul className="blog-list">

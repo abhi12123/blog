@@ -2,18 +2,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [displayNavbar, setDisplayNavbar] = useState(false);
-  const handleDisplayNavbar = () => {
-    setDisplayNavbar(!displayNavbar);
-  };
-
-  const trendingTopics = [
-    { slug: "web-development", name: "Web Development" },
-    { slug: "reactjs", name: "ReactJs" },
-    { slug: "javascript", name: "JavaScript" },
-    { slug: "html", name: "HTML" },
-  ];
-
   return (
     <nav className="navbar">
       <section className="navbar-container logo-name">
@@ -22,30 +10,14 @@ export default function Navbar() {
             <h3>Abhinav VP</h3>
           </a>
         </Link>
-        <Link href="/">
-          <a>About</a>
-        </Link>
-      </section>
-      <section
-        className={`trending-topics ${
-          displayNavbar ? "mobile-display-navbar" : ""
-        }`}
-      >
-        <p
-          className="topics-label"
-          id="topics-label"
-          onClick={handleDisplayNavbar}
-        >
-          Trending topics ✨
-        </p>
-        {trendingTopics?.map((topic) => {
-          return (
-            <Link href={`/topics/${topic.slug}`} key={topic.slug}>
-              <a className="topic">#{topic.name}</a>
-            </Link>
-          );
-        })}
-        <Link href={"/topics"}>and more ..</Link>
+        <div className="right-nav">
+          <Link href="/topics">
+            <a>Topics</a>
+          </Link>
+          <Link href="/">
+            <a>About</a>
+          </Link>
+        </div>
       </section>
     </nav>
   );
