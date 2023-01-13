@@ -39,7 +39,7 @@ export default function Home({ allTopics }) {
         <ul className="blog-list">
           {allTopics.map((topic, index) => {
             return (
-              <Link href={`/topics/${topic.slug}`}>
+              <Link href={`/topics/${topic.slug}`} key>
                 <a className="blog-list-entry" key={index}>
                   <li>
                     {topic.name}({topic.postsCount})
